@@ -1,9 +1,9 @@
 import React, { useEffect, useState } from "react";
-import { API_KEY, imageUrl } from "../../constants/constants";
+import { imageUrl } from "../../constants/constants";
 import axios from "../../axios";
 import "./Banner.css";
 
-function Banner() {
+function Banner(props) {
   const [movie, setMovie] = useState([]);
   const [count, setCount] = useState(0);
   const [loaded, setLoaded] = useState(false);
@@ -34,7 +34,7 @@ function Banner() {
 
   useEffect(() => {
     axios
-      .get(`trending/all/week?api_key=${API_KEY}&language=en-US`)
+      .get(props.url)
       .then((response) => {
         console.log(
           response.data.results[count % response.data.results.length]
