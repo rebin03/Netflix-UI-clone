@@ -7,26 +7,69 @@
   height: 30px;
   padding: 20px;
   display: flex;
+  /* align-items: center; */
   justify-content: space-between;
   /* background-color: #111; */
   /* background-color: transparent; */
   /* NavBar.css */
   background-image: linear-gradient(180deg, #111, rgba(37, 37, 37, 0.01));
+}
 
-
-
-
-  
+.hide {
+  opacity: 0;
+  pointer-events: none;
 }
 
 .logo {
   position: fixed;
   left: 20px;
   width: 80px;
+  /* margin-right: 20px; */
 }
 
 .avatar {
   position: fixed;
-  right: 20px;
+  right: 30px;
   width: 30px;
+}
+
+.nav-list {
+  display: flex;
+  list-style-type: none;
+  margin: 0;
+  /* padding: 0; */
+  padding-left: 120px;
+}
+
+.nav-item {
+  margin-right: 25px;
+  font-size: 16px;
+  color: #fff;
+  opacity: 0.7;
+  cursor: pointer;
+  /* transition: font-weight 0.3s ease, border-color 0.3s ease;
+  border-bottom: 2px solid transparent; */
+}
+
+.nav-item:hover {
+  opacity: 1;
+  color: beige;
+}
+
+.search-icon {
+  margin-right: 110px;
+  font-size: 18px;
+  color: #fff;
+  opacity: 0.7;
+  cursor: pointer;
+}
+
+.search-icon i {
+  transition: color 0.3s ease;
+}
+
+.search-icon i:hover {
+  font-size: 19px;
+  color: beige;
+  opacity: 1;
 }
