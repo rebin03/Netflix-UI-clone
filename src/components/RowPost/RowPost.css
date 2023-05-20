@@ -39,6 +39,9 @@
         max-width: 100px;
         margin-right: 10px;
     }
+    .row h2{
+        font-size: 16px;
+    }
 }
 
 .poster:hover,.smallPoster:hover{
