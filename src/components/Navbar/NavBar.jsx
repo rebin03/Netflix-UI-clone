@@ -3,6 +3,7 @@ import "./NavBar.css";
 
 function NavBar() {
     const [scroll, setScroll] = useState(false);
+    const [isNavOpen, setIsNavOpen] = useState(false);
 
   useEffect(() => {
     window.addEventListener("scroll", handleScroll);
@@ -18,6 +19,11 @@ function NavBar() {
       setScroll(false);
     }
   };
+
+  const toggleNav = () => {
+    setIsNavOpen(!isNavOpen);
+  };
+
   return (
     <div className='navbar'>
       <img
@@ -25,7 +31,12 @@ function NavBar() {
         src="https://upload.wikimedia.org/wikipedia/commons/thumb/0/08/Netflix_2015_logo.svg/1920px-Netflix_2015_logo.svg.png"
         alt="Netflix logo"
       />
-       <ul className={`nav-list ${scroll ? "hide" : ""}`}>
+      <div className={`nav-toggle ${isNavOpen ? "open" : ""}`} onClick={toggleNav}>
+        <span></span>
+        <span></span>
+        <span></span>
+      </div>
+       <ul className={`nav-list ${scroll ? "hide" : ""} ${isNavOpen ? "open" : ""}`}>
         <li className='nav-item'>Home</li>
         <li className='nav-item'>TV Shows</li>
         <li className='nav-item'>Movies</li>
