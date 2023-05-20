@@ -57,7 +57,8 @@
 }
 
 .search-icon {
-  margin-right: 110px;
+  margin-right: 55px;
+  margin-top: 5px;
   font-size: 18px;
   color: #fff;
   opacity: 0.7;
@@ -89,7 +90,7 @@
   height: 5px;
   width: 30px;
   border-radius: 2px;
-  opacity: 0.7;
+  opacity: 0.3;
   position: absolute;
   top: 35px;
   transform: translateY(-50%);
